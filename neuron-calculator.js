@@ -15,6 +15,29 @@ class NeuronCalculator {
       return [1, v];
     }
   }
+  
+  
+  calculateLogistic(point, weights){
+    let v = this.#calculateV(point, weights);
+    let result = this.logisticFunction(a, v);
+    if (result < 0.5) {
+      return [0, v];
+    } else {
+      return [1, v];
+    }
+  }
+  
+  logisticFunction(a, v) {
+    let numerator = 1;
+    let d_e = Math.exp(-a * v);
+    let denominator = 1 + d_e;
+    return numerator / denominator;
+  }
+  
+  logisticFunctionDerivative(a, v) {
+    let result = a * this.logisticFunction(a, p) * (1 - this.logisticFunction(a, v));
+    return result;
+  }
 
   /**
    *

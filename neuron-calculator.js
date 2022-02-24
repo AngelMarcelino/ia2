@@ -27,6 +27,11 @@ class NeuronCalculator {
     }
   }
   
+  linearFunction(a, v) {
+    let result = a * v;
+    return result;
+  }
+  
   logisticFunction(a, v) {
     let numerator = 1;
     let d_e = Math.exp(-a * v);

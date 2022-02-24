@@ -1,0 +1,21 @@
+hacer clase punto
+hacer clase linea
+
+
+hacer clases con los diferentes elementos
+
+las clases de los elementos van a tener una referencia al canvas
+
+habrá una colección de elementos para ser pintados
+
+habrá una función que se encargará de iterar esos elementos y pintarlos
+
+se llamará a la función de pintado cada que se actualice una propiedad de algun objeto
+
+se mantendrá un mapa con la posición actual de la línea para poder
+actualizarla con facilidad o mejor se mantendran variables
+separadas para la linea y los puntos
+
+habrá una función que recibirá la línea (o los pesos y bias)
+y un punto, esta función devolvera la clase a la cual el punto pertenece
+

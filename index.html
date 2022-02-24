@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Practica 1</h1>
+    <p>Angel Marcelino Gonzalez Mayoral</p>
+    <div class="container">
+      <div class="canvas-container">
+        <canvas id="canvas" height="300px" width="300px"> </canvas>
+      </div>
+      <div class="input-container">
+        <label for="w1">W1</label>
+        <input id="w1" type="number" value="1" />
+        <label for="w2">W2</label>
+        <input id="w2" type="number" value="1" />
+        <label for="threshold">Theta</label>
+        <input id="threshold" type="number" value="1.5" />
+        <label for="n">n</label>
+        <input id="n" type="number" value="0.4" />
+        <button type="button" id="actionButton">Action</button>
+      </div>
+    </div>
+    <script src="coordinates-translator.js"></script>
+    <script src="neuron-calculator.js"></script>
+    <script src="trainer.js"></script>
+    <script src="environment-renderer.js"></script>
+    <script src="renderable.js"></script>
+    <script src="point.js"></script>
+    <script src="line.js"></script>
+    <script src="environment.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

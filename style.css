@@ -1,0 +1,22 @@
+/* style.css */
+body {
+  font-family: sans-serif;
+  background-color: rgb(80, 78, 78);
+  color: white;
+  margin: 0 3em;
+}
+.canvas-container {
+  border: 1px solid #000;
+}
+.container {
+  display: flex;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+.input-container > input {
+  margin-bottom: 1em;
+  width: 50px;
+}

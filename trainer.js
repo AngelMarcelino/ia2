@@ -7,18 +7,20 @@ class Trainer {
   #endCallback;
   #neuronCalculator;
   #scale;
+  #activationFunction;
   /**
    *
    * @param {number} n
    * @param {number} epoch
    */
-  constructor(n, epoch, trainerCallback, endCallback, scale) {
+  constructor(n, epoch, trainerCallback, endCallback, scale, activationFunction) {
     this.#n = n;
     this.#epoch = 10000000;
     this.#trainerCallback = trainerCallback;
     this.#endCallback = endCallback;
     this.#neuronCalculator = new NeuronCalculator();
     this.#scale = scale;
+    this.#activationFunction = activationFunction;
   }
 
   /**
@@ -43,7 +45,7 @@ class Trainer {
           dataSet[i].y / this.#scale,
           dataSet[i].showClas
         );
-        let [output, v] = this.#neuronCalculator.calculateNeuronOuput(
+        let [output, v] = this.#activationFunction(
           current,
           currentWeights
         );

@@ -45,11 +45,12 @@ class Trainer {
           dataSet[i].y / this.#scale,
           dataSet[i].showClas
         );
+        current
         let [output, v] = this.#activationFunction(
           current,
           currentWeights
         );
-        let error = classNumberMap[current.showClas] - output;
+        let error = point.result - output;
         if (error !== 0) {
           let newWeights = this.#modifyWeight(
             [1, current.x, current.y],

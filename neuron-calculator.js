@@ -21,9 +21,9 @@ class NeuronCalculator {
     let v = this.#calculateV(point, weights);
     let result = this.logisticFunction(a, v);
     if (result < 0.5) {
-      return [0, v];
+      return [0, result];
     } else {
-      return [1, v];
+      return [1, result];
     }
   }
   

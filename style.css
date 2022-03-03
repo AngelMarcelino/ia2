@@ -18,5 +18,9 @@ body {
 }
 .input-container > input {
   margin-bottom: 1em;
-  width: 50px;
+  width: 70px;
+}
+
+.input-container > select {
+  margin-bottom: 1em;
 }

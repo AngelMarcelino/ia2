@@ -6,13 +6,23 @@
  * HTMLInputElement,
  * HTMLInputElement,
  * HTMLInputElement,
+ * HTMLSelectElement,
  * HTMLCanvasElement]} */
-let [button, w1Input, w2Input, thresholdInput, nInput, canvas] = [
+let [
+  button,
+  w1Input,
+  w2Input,
+  thresholdInput,
+  nInput,
+  activationFnSelect,
+  canvas,
+] = [
   "actionButton",
   "w1",
   "w2",
   "threshold",
   "n",
+  "activationFn",
   "canvas",
 ].map((id) => document.getElementById(id));
 let context = canvas.getContext("2d");
@@ -58,7 +68,9 @@ button.addEventListener("click", async () => {
       () => {
         isWorking = false;
       },
-      scale
+      scale,
+      +activationFnSelect.value,
+      activationFnSelect.value == 3 ? 0.15 : 0.05
     );
     await trainer.train(environment.points, values);
   }

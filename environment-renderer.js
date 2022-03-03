@@ -127,8 +127,8 @@ class EnvironmentRenderer {
   #drawPoint(point) {
     let [x, y] = this.#coordinatesTranslator
       .mathToCanvas(point.x, point.y);
-    let pointWidth = 4;
-    let pointHeight = 4;
+    let pointWidth = 7;
+    let pointHeight = 7;
     this.#preserverColor(() => {
       this.#gContext.fillStyle = point.clas;
       this.#gContext.fillRect(

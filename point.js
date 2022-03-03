@@ -4,7 +4,7 @@ class Point extends Renderable {
   #showClas;
   #x;
   #y;
-  #result
+  #result;
   /**
    *
    * @param {number} x
@@ -12,13 +12,13 @@ class Point extends Renderable {
    * @param {string} clas
    * @param {() => void} reRenderCallback
    */
-  constructor(x, y, clas, reRenderCallback) {
+  constructor(x, y, clas, reRenderCallback, result = null) {
     super(reRenderCallback);
     this.x = x;
     this.y = y;
     this.clas = clas;
     this.showClas = clas;
-    this.result = null;
+    this.result = result;
   }
   set clas(clas) {
     this.#clas = clas;
@@ -48,13 +48,11 @@ class Point extends Renderable {
   get y() {
     return this.#y;
   }
-  set result (value) {
+  set result(value) {
     this.#result = value;
   }
-  
-  get result () {
+
+  get result() {
     return this.#result;
   }
-  
-  
 }

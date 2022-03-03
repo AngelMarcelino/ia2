@@ -9,11 +9,11 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Practica 1</h1>
+    <h1>Practica 3</h1>
     <p>Angel Marcelino Gonzalez Mayoral</p>
     <div class="container">
       <div class="canvas-container">
-        <canvas id="canvas" height="300px" width="300px"> </canvas>
+        <canvas id="canvas" height="1000px" width="1000px"> </canvas>
       </div>
       <div class="input-container">
         <label for="w1">W1</label>
@@ -23,7 +23,12 @@
         <label for="threshold">Theta</label>
         <input id="threshold" type="number" value="1.5" />
         <label for="n">n</label>
-        <input id="n" type="number" value="0.4" />
+        <input id="n" type="number" value="0.15" />
+        <select id="activationFn">
+          <option value="1">Logistica</option>
+          <option value="2">Tanh</option>
+          <option value="3">Linear</option>
+        </select>
         <button type="button" id="actionButton">Action</button>
       </div>
     </div>
